@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "rm": "rmdir /s /q docs || del /q docs",
     "mv": "move build docs",
-    "git": "git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin master",
+    "git": "git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin main",
     "predeploy": "npm run build",
     "deploy": "npm run rm && npm run build && npm run mv && npm run git && gh-pages -d build"
   },
