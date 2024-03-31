@@ -18,11 +18,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rm": "rm -rf docs",
-    "mv": "mv build docs",
-    "git": "git add . && git commit && git push origin master",
+    "rm": "rmdir /s /q docs || del /q docs",
+    "mv": "move build docs",
+    "git": "git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin master",
     "predeploy": "npm run build",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "deploy": "npm run rm && npm run build && npm run mv && npm run git && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
